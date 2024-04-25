@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="./static/img/favicon.ico">
+
+    <title>CAC-Movies</title>
+</head>
+
+<body class="bodyRegister">
+    <header class="headerRegister">
+        <nav>
+            <a class="logo" href="../index.html">
+                <i class="fas fa-film" aria-hidden="true"></i>
+                <span>CAC - Movies</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="mainRegister">
+        <section class="seccionRegister">
+            <h2 class="tituloRegister">Registro</h2>
+
+            <form action="#" method="get" class="formRegister">
+                <div>
+                    <input type="text" placeholder="Nombre" required class="nombre" name="nombre">
+                </div>
+                <div>
+                    <input type="text" placeholder="Apellido" required class="apellido" name="apellido">
+                </div>
+                <div>
+                    <input type="email" placeholder="Email" required class="email" name="email">
+                </div>
+                <div>
+                    <input type="password" placeholder="Contraseña" required class="password" name="password">
+                </div>
+                <div>
+                    <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" required class="fechaNacimiento"
+                        name="fechaNacimiento">
+                </div>
+
+                <div class="form-control">
+                    <select name="country" id="country" class="form-select">
+                        <option value="">Pais</option>
+                        <option value="AR">Argentina</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BR">Brasil</option>
+                        <option value="CH">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="CU">Cuba</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="ES">El Salvador</option>
+                        <option value="GU">Guatemala</option>
+                        <option value="HO">Honduras</option>
+                        <option value="MX">Mexico</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="PA">Panama</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Perú</option>
+                        <option value="PR">Puerto Rico</option>
+                        <option value="RD">Republica Dominicana</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="VE">Venezuela</option>
+                    </select>
+                </div>
+                <div class="tyc">
+                    <input class="check" type="checkbox" class="terminos" required>
+                    <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
+                </div>
+                <div>
+                    <input class="boton" type="submit" value="Registrarse">
+                </div>
+                <div>
+                    <a class="ayuda" href="#">¿Necesitas ayuda?</a>
+                </div>
+            </form>
+
+        </section>
+    </main>
+</body>
+
+</html>
