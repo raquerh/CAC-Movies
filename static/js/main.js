@@ -6,7 +6,7 @@ let miHeader = `
         <span class="logo-text">CAC - Movies</span>
     </a>
     <ul class="nav-links">
-        <li class="navItem"><a class="navLink" href="#popular">Tendencias</a></li>
+        <li class="navItem" id="irTend"><a class="navLink">Tendencias</a></li>
         <li class="navItem"><a class="navLink" href="./templates/register.html">Registrate</a></li>
         <li class="navItem"><a class="navLink" id="btnInicioSesion" href="./templates/iniciosesion.html">Iniciar
                 Sesion</a>
@@ -31,15 +31,15 @@ let miFooter = `
         <a href="#" class="irArriba">
             <img src="./static/img/flecha-hacia-arriba.png" alt="flecha Ir Arriba">
         </a>
-        `
+`
 
 document.querySelector("footer").innerHTML = miFooter
 
 let misTendencias = ``
 
-for(let peli of tendencia)
+for (let peli of tendencia)
 
-    misTendencias = misTendencias+ `
+    misTendencias = misTendencias + `
         <div class="movie-item">
             <a href="./templates/detail-movie.html">
                 <div class="pelicula">
@@ -52,17 +52,30 @@ for(let peli of tendencia)
         </div>
 
 `
+
 document.querySelector(".listaTendencia").innerHTML = misTendencias
 
 let aclamadas = ``
 
 for (let peliAclama of peliAclamadas)
 
-    aclamadas = aclamadas+ `
+    aclamadas = aclamadas + `
         <div class="aclamadaPelicula">
             <img class="imgAclamada" src="${peliAclama.image}" alt="aclamada">
         </div>
-        
 `
 
 document.querySelector(".aclamadas").innerHTML = aclamadas
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var irTend = document.querySelector('#irTend a'); 
+    var tendencias = document.querySelector('.tendencias');
+
+    irTend.addEventListener('click', function (event) {
+        event.preventDefault(); // evita el comportamiento predeterminado del enlace
+
+        tendencias.scrollIntoView({ behavior: 'smooth' }); // desplazamiento suave
+    });
+});
+
