@@ -63,3 +63,55 @@ let tendencia = [
     }
 
 ]
+
+let peliAclamadas = [
+    {
+        "id": 1,
+        "image": "./static/img/aclamada_1.jpg"
+    },
+    {
+        "id": 2,
+        "image": "./static/img/aclamada_2.jpg"
+    },
+    {
+        "id": 3,
+        "image": "./static/img/aclamada_3.jpg"
+    },
+    {
+        "id": 4,
+        "image": "./static/img/aclamada_4.jpg"
+    },
+    {
+        "id": 5,
+        "image": "./static/img/aclamada_5.jpg"
+    },
+    {
+        "id": 6,
+        "image": "./static/img/aclamada_6.jpg"
+    },
+    {
+        "id": 7,
+        "image": "./static/img/aclamada_7.jpg"
+    },
+    {
+        "id": 8,
+        "image": "./static/img/aclamada_8.jpg"
+    },
+    {
+        "id": 9,
+        "image": "./static/img/aclamada_9.jpg"
+    },
+    {
+        "id": 10,
+        "image": "./static/img/aclamada_10.jpg"
+    },
+    {
+        "id": 11,
+        "image": "./static/img/aclamada_11.jpg"
+    },
+    {
+        "id": 12,
+        "image": "./static/img/aclamada_12.jpg"
+    }
+
+]   

@@ -54,3 +54,15 @@ for(let peli of tendencia)
 `
 document.querySelector(".listaTendencia").innerHTML = misTendencias
 
+let aclamadas = ``
+
+for (let peliAclama of peliAclamadas)
+
+    aclamadas = aclamadas+ `
+        <div class="aclamadaPelicula">
+            <img class="imgAclamada" src="${peliAclama.image}" alt="aclamada">
+        </div>
+        
+`
+
+document.querySelector(".aclamadas").innerHTML = aclamadas
