@@ -23,24 +23,27 @@
 
     <main class="mainRegister">
         <section class="seccionRegister">
-            <form class="formRegister" action="#" method="get">
+            <form class="formulario" action="#" method="get">
                 <h2 class="tituloRegister">Iniciar Sesión</h2>
                 <div>
-                    <input type="email" placeholder="Email" required class="email" name="email">
+                    <input type="email" placeholder="Email" class="email" name="email">
+                    <span id="errorEmail" class="error"></span>
                 </div>
                 <div>
-                    <input type="password" placeholder="Contraseña" required class="password" name="password">
+                    <input type="password" placeholder="Contraseña" class="password" name="password">
+                    <span id="errorPassword" class="error"></span>
                 </div>
                 <div>
                     <input class="boton" type="submit" value="Iniciar Sesión">
                 </div>
                 <div>
-                    <a class="ayuda" class="ayuda" href="registrarse.html">Registrarse</a>
+                    <a class="ayuda" class="ayuda" href="./register.html">Registrarse</a>
                 </div>
             </form>
         </section>
 
     </main>
+    <script src="../static/js/registro.js"></script>
 </body>
 
 </html>
