@@ -28,22 +28,31 @@
         <section class="seccionRegister">
             <h2 class="tituloRegister">Registro</h2>
 
-            <form action="#" method="get" class="formRegister">
+            <form action="#" method="get" class="formulario" id="myForm">
                 <div>
-                    <input type="text" placeholder="Nombre" required class="nombre" name="nombre">
+                    <input type="text" placeholder="Nombre" class="nombre" name="nombre">
+                    <span id="errorNombre" class="" error"></span>
                 </div>
                 <div>
-                    <input type="text" placeholder="Apellido" required class="apellido" name="apellido">
+                    <input type="text" placeholder="Apellido" class="apellido" name="apellido">
+                    <span id="errorApellido" class="" error"></span>
                 </div>
                 <div>
-                    <input type="email" placeholder="Email" required class="email" name="email">
+                    <input type="email" placeholder="Email" class="email" name="email">
+                    <span id="errorEmail" class="" error"></span>
                 </div>
                 <div>
-                    <input type="password" placeholder="Contraseña" required class="password" name="password">
+                    <input type="password" placeholder="Contrasena" class="password" name="password">
+                    <span id="errorPassword" class="" error"></span>
                 </div>
                 <div>
-                    <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" required class="fechaNacimiento"
+                    <input type="password" placeholder="confirmacion" class="password" name="password">
+                    <span id="errorConfirmacion" class="" error"></span>
+                </div>
+                <div>
+                    <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" class="fechaNacimiento"
                         name="fechaNacimiento">
+                    <span id="errorFechaNacimiento" class="" error"></span>
                 </div>
 
                 <div class="form-control">
@@ -70,10 +79,12 @@
                         <option value="UY">Uruguay</option>
                         <option value="VE">Venezuela</option>
                     </select>
+                    <span id="errorPais" class="" error"></span>
                 </div>
                 <div class="tyc">
-                    <input class="check" type="checkbox" class="terminos" required>
+                    <input class="check" type="checkbox" class="terminos">
                     <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
+                    <span id="errorTerminos" class="" error"></span>
                 </div>
                 <div>
                     <input class="boton" type="submit" value="Registrarse">
@@ -85,6 +96,9 @@
 
         </section>
     </main>
+
+    <script src="../static/js/registro.js"></script>
+    
 </body>
 
 </html>
