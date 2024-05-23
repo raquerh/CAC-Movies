@@ -16,7 +16,7 @@ let miHeader = `
 
 `
 
-document.querySelector("header").innerHTML = miHeader
+document.querySelector(".header").innerHTML = miHeader
 
 let miFooter = `
         <nav class="navegacion">
@@ -69,7 +69,7 @@ document.querySelector(".aclamadas").innerHTML = aclamadas
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    var irTend = document.querySelector('#irTend a'); 
+    var irTend = document.querySelector('#irTend a');
     var tendencias = document.querySelector('.tendencias');
 
     irTend.addEventListener('click', function (event) {
@@ -78,4 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
         tendencias.scrollIntoView({ behavior: 'smooth' }); // desplazamiento suave
     });
 });
+
+
 
