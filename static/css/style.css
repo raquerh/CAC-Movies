@@ -231,9 +231,7 @@ body {
         }
 
         .listaTendencia {
-            display: grid;
-            grid-template-rows: repeat(2, 1fr);
-            grid-template-columns: repeat(6, 1fr);
+            display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 60px;
@@ -374,7 +372,6 @@ body {
 .footer {
     background-color: var(--primary-color);
     color: white;
-    ;
     height: 15vh;
     display: flex;
     justify-content: center;
@@ -501,6 +498,14 @@ body {
                     font-weight: 500;
 
                 }
+                .mensaje-error {
+                    display: none;
+                    color: (var --primary-color)
+                }
+                
+                .error {
+                    border-color: red;
+                }
 
                 .ayuda {
                     margin-top: 40px;
@@ -519,6 +524,213 @@ body {
     }
 }
 
-/* Estilos para Iniciar Sesion */
+/* Media queries para ajustar al tamaño de pantalla */
+
+@media (max-width: 768px) {
+    .header {
+        height: initial;
+
+        .navegacion {
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .anclaLogo {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            .listaNav {
+                padding: initial;
+
+                .listaItem {
+                    .linkNav {
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        .sectionPrincipal {
+            height: 60vh;
+
+            .tituloPrincipal {
+                font-size: 2.5rem;
+            }
+
+            .subtituloPrincipal {
+                font-size: 1.5rem;
+            }
+
+            .botonRegistrarse {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        .buscadorPrincipal {
+            height: 30vh;
+
+            .tituloSection {
+                font-size: 1.6rem;
+            }
+
+            .buscadorPeliculas {
+                .inputBuscador {
+                    font-size: 1rem;
+                    height: 40px;
+                    width: 300px;
+                }
+
+                .botonBuscador {
+                    height: 40px;
+                    padding: 0 15px;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .peliculasTendencia {
+            width: 95%;
+
+            .tituloSection {
+                font-size: 2rem;
+            }
+
+            .peliculas {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    width: 100%;
+
+                    .pelicula {
+                        width: 100%;
+                        height: 500px;
+
+                        .tituloPelicula {
+                            h4 {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    box-shadow: initial;
+                    transform: scale(0.9);
+                }
+            }
+
+            .boton {
+                padding: 0.8rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        .peliculasAclamadas {
+            .tituloSection {
+                font-size: 2rem;
+            }
+
+            .aclamadas {
+                .peliculaItem {
+                    width: 150px;
+                    min-width: 150px;
+                    font-size: 15px;
+                    margin-left: 20px;
+
+                    .imgAclamada {
+                        width: 90%;
+                        height: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        height: initial;
+        padding-top: 15px;
+        padding-bottom: 20px;
+
+        .listaNav {
+            flex-direction: column;
+            row-gap: 15px;
+
+            .listaItem {
+
+                .linkNav {
+                    font-size: 1rem;
+                }
+
+                .administradorPeliculas {
+                    padding: 0.5rem 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .bodyRegistrarse {
+        .headerRegistrarse {
+            padding: 20px;
+
+            .anclaLogo {
+                font-size: 1rem;
+            }
+        }
+
+        .main {
+            .seccionRegistrarse {
+                width: 95%;
+                padding: 10px 10px;
+
+                .tituloRegistrarse {
+                    font-size: 2rem;
+                }
+
+                form {
+                    width: 100%;
+                    text-align: center;
+
+                    input:not(.check, .boton),
+                    select {
+                        width: 80%;
+                        height: 35px;
+                        font-size: 1rem;
+                    }
+
+                    .terminos {
+                        width: 80%;
+                        margin: 0 auto;
+                        font-size: 0.7rem;
+                    }
+
+                    .boton {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        width: 70%;
+                        padding: 0.8rem 0.8rem;
+                        font-size: 0.8rem;
+                    }
+                    
+                    .ayuda {
+                        text-align: left;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
 
 

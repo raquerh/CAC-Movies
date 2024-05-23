@@ -60,6 +60,41 @@ let tendencia = [
         "id": 12,
         "name": "Genghis Khan",
         "image": "./static/img/peli_12.jpg",
+    },
+    {
+        "id": 13,
+        "name": "Lift",
+        "image": "./static/img/peli_13.jpg",
+    },
+    {
+        "id": 14,
+        "name": "Attack",
+        "image": "./static/img/peli_14.jpg",
+    },
+    {
+        "id": 15,
+        "name": "Mutant Ghost Wargirl",
+        "image": "./static/img/peli_15.jpg",
+    },
+    {
+        "id": 16,
+        "name": "Poor Things",
+        "image": "./static/img/peli_16.jpg",
+    },
+    {
+        "id": 17,
+        "name": "The 5",
+        "image": "./static/img/peli_17.jpg",
+    },
+    {
+        "id": 18,
+        "name": "Trunl - Locked In",
+        "image": "./static/img/peli_18.jpg",
+    },
+    {
+        "id": 19,
+        "name": "Anyone but you",
+        "image": "./static/img/peli_19.jpg",
     }
 
 ]

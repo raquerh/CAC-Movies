@@ -30,33 +30,31 @@
 
             <form action="#" method="get" class="formulario" id="myForm">
                 <div>
-                    <input type="text" placeholder="Nombre" class="nombre" name="nombre">
-                    <span id="errorNombre" class="error"></span>
+                    <input type="text" placeholder="Nombre" id="nombre" class="nombre" name="nombre">
+                    <div class="errorCompletar"></div>
                 </div>
                 <div>
-                    <input type="text" placeholder="Apellido" class="apellido" name="apellido">
-                    <span id="errorApellido" class="error"></span>
+                    <input type="text" placeholder="Apellido" id="apellido" class="apellido" name="apellido">
+                    <div class="errorCompletar"></div>
                 </div>
                 <div>
-                    <input type="email" placeholder="Email" class="email" name="email">
-                    <span id="errorEmail" class="error"></span>
+                    <input type="email" placeholder="Email" id="email" class="email" name="email">
+                    <div class="errorCompletar"></div>
                 </div>
                 <div>
-                    <input type="password" placeholder="Contrasena" class="password" name="password">
-                    <span id="errorPassword" class="error"></span>
+                    <input type="password" placeholder="Contraseña" id="password" class="password" name="password">
+                    <div class="errorCompletar"></div>
                 </div>
                 <div>
-                    <input type="password" placeholder="confirmacion" class="password" name="password">
-                    <span id="errorConfirmacion" class="error"></span>
+                    <input type="password" placeholder="Confirmación" id="confirmacion" class="confirmacion" name="confirmacion">
+                    <div class="errorCompletar"></div>
                 </div>
                 <div>
-                    <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" class="fechaNacimiento"
-                        name="fechaNacimiento">
-                    <span id="errorFechaNacimiento" class="error"></span>
+                    <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" id="fechaNacimiento" class="fechaNacimiento" name="fechaNacimiento">
+                        <div class="errorCompletar"></div>
                 </div>
-
                 <div class="form-control">
-                    <select name="country" id="country" class="form-select">
+                    <select name="country" id="pais" class="pais">
                         <option value="">Pais</option>
                         <option value="AR">Argentina</option>
                         <option value="BO">Bolivia</option>
@@ -79,26 +77,25 @@
                         <option value="UY">Uruguay</option>
                         <option value="VE">Venezuela</option>
                     </select>
-                    <span id="errorPais" class="error"></span>
+                    <div class="errorCompletar"></div>
                 </div>
                 <div class="tyc">
-                    <input class="check" type="checkbox" class="terminos">
+                    <input class="check" type="checkbox" id="terminos">
                     <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
-                    <span id="errorTerminos" class="error"></span>
+                    <div class="errorCompletar"></div>
                 </div>
                 <div>
-                    <input class="boton" type="submit" value="Registrarse">
+                    <input class="boton" type="submit" onclick="return validarFormulario()" value="Registrarse">
                 </div>
                 <div>
                     <a class="ayuda" href="#">¿Necesitas ayuda?</a>
                 </div>
             </form>
-
         </section>
     </main>
 
-    <script src="../static/js/registro.js"></script>
-    
+    <script src="../static/js/validarRegistro.js"></script>
+
 </body>
 
 </html>
