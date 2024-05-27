@@ -23,12 +23,12 @@ let tendencia = [
     },
     {
         "id": 5,
-        "name": "Migration",
+        "name": "Aquaman and the Lost Kingdom",
         "image": "./static/img/peli_5.jpg",
     },
     {
         "id": 6,
-        "name": "Aquaman and the Lost Kingdom",
+        "name": "Migration",
         "image": "./static/img/peli_6.jpg",
     },
     {
