@@ -6,6 +6,7 @@ let miHeader = `
         <span class="logo-text">CAC - Movies</span>
     </a>
     <ul class="nav-links">
+        <li class="navItem" id="irApi"><a class="navLink" href="./templates/api.html">Conexion Api</a></li>
         <li class="navItem" id="irTend"><a class="navLink">Tendencias</a></li>
         <li class="navItem"><a class="navLink" href="./templates/register.html">Registrate</a></li>
         <li class="navItem"><a class="navLink" id="btnInicioSesion" href="./templates/iniciosesion.html">Iniciar
