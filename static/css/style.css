@@ -460,6 +460,7 @@ body {
             .formulario {
                 width: 100%;
                 padding: 40px;
+
                 input:not(.check, .boton),
                 select {
                     width: 100%;
@@ -498,11 +499,12 @@ body {
                     font-weight: 500;
 
                 }
+
                 .mensaje-error {
                     display: none;
                     color: (var --primary-color)
                 }
-                
+
                 .error {
                     border-color: red;
                 }
@@ -524,12 +526,50 @@ body {
     }
 }
 
-.tituloApi{
+.tituloApi {
     color: white;
     height: 10vh;
     line-height: 10vh;
     text-align: center;
     background: var(--primary-color);
     width: 20%;
-    margin: 0 auto;
+    margin: 5% auto;
+}
+
+.apiContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+
+    .tituloPelicula {
+        z-index: 2;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        max-width: 20rem;
+        width: 100%;
+        transform: translateY(-50%) translateX(-50%);
+
+        h4 {
+            font-size: 2rem;
+            font-weight: bold;
+            opacity: 0;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.1rem;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+    }
+
+    .imgPeli {
+        width: 200px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+
+    }
 }

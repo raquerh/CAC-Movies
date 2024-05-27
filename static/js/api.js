@@ -1,4 +1,5 @@
-const container = document.getElementById('imageContainer');
+const API_SERVER = 'https://api.themoviedb.org/3';
+
 const options = {
     method: 'GET',
     headers: {
@@ -7,26 +8,45 @@ const options = {
     }
 };
 
-fetch('https://api.themoviedb.org/3/account/21287555/favorite/movies', options)
-    .then(response => response.json())
-    .then(datos => {
-        datos.results.forEach(element => {
-            const div = document.createElement('div');
-            const img = document.createElement('img'); // Cambio a img
+const cargarPeliculasApi = async (page = 1) => {
+    try {
+        const response = await fetch(`${API_SERVER}/movie/popular?page=${page}`, options);
+        const data = await response.json(); 
+        const movies = data.results;
+        console.log(movies);
+        const apiContainer = document.querySelector('.apiContainer');
+        apiContainer.innerHTML = '';
 
-            img.src = element.image;
-            img.alt = element.name;
-            img.style.width = '200px';
+        movies.forEach(movie => {
+            const ancla = document.createElement('a');
+            ancla.href = './pages/detalle.html';
+            const pelicula = document.createElement('div');
+            pelicula.classList.add('pelicula');
+            const img = document.createElement('img');
+            img.classList.add('imgPeli');
+            img.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
+            img.alt = movie.title;
+            img.loading = 'lazy';
 
-            const p = document.createElement('p');
-            p.textContent = element.name;
+            const tituloPelicula = document.createElement('div');
+            tituloPelicula.classList.add('tituloPelicula');
 
-            div.appendChild(img);
-            div.appendChild(p);
-            container.appendChild(div);
+            const titulo = document.createElement('h4');
+            titulo.textContent = movie.title;
+            ancla.appendChild(pelicula);
+            pelicula.appendChild(img);
+            pelicula.appendChild(tituloPelicula);
+            tituloPelicula.appendChild(titulo);
+            apiContainer.appendChild(ancla);
         });
-    })
-    .catch(err => console.log(err));
 
+        apiContainer.parentElement.setAttribute('data-page', page);
+    } catch (error) {
+        console.error('Error fetching movies:', error);
+    }
+};
 
-
+// Llama a la función para cargar las películas al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    cargarPeliculasApi();
+});
