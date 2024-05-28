@@ -19,7 +19,7 @@ const cargarPeliculasApi = async (page = 1) => {
 
         movies.forEach(movie => {
             const ancla = document.createElement('a');
-            ancla.href = './pages/detalle.html';
+            ancla.href = `../templates/detalle.html?id=${movie.id}`;
             const pelicula = document.createElement('div');
             pelicula.classList.add('pelicula');
             const img = document.createElement('img');

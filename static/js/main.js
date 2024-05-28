@@ -42,7 +42,7 @@ for (let peli of tendencia)
 
     misTendencias = misTendencias + `
         <div class="movie-item">
-            <a href="./templates/detail-movie.html">
+            <a href="./templates/detalle.html">
                 <div class="pelicula">
                     <img class="imgTendencia" src="${peli.image}" alt="pelicula">
                     <div class="tituloPelicula">
